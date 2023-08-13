@@ -21,11 +21,11 @@ runcmd:
   - [bash, -c, 'cd /home/opc/doguito-app && npm install']
   
   # URL Wallet 
-  - [wget, ???, -P, /usr/lib/oracle/21/client64/lib/network/admin]
+  - [wget,https://objectstorage.us-ashburn-1.oraclecloud.com/n/idbthry6v7vm/b/interno/o/Wallet_DOGUITODB.zip, -P, /usr/lib/oracle/21/client64/lib/network/admin]
   - [sudo, sh, -c, 'cd /usr/lib/oracle/21/client64/lib/network/admin/ && unzip -B Wallet_*.zip']
   
   # URL doguito-site.service
-  - [wget, ???, -P, /lib/systemd/system]
+  - [wget, https://objectstorage.us-ashburn-1.oraclecloud.com/n/idbthry6v7vm/b/interno/o/doguito-site.service, -P, /lib/systemd/system]
   - [systemctl, daemon-reload]
   - [systemctl, enable, doguito-site.service]
   - [systemctl, start, doguito-site.service]
